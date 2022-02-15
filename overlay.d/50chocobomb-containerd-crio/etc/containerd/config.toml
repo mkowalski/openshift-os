@@ -1,0 +1,4 @@
+[plugins]
+[plugins.cri.cni]
+bin_dir="/usr/libexec/cni"
+

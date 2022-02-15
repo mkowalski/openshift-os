@@ -1,0 +1,26 @@
+# This is a file defining which content sets are needed to update content in 
+# this OS. Data provided here helps determine which images are vulnerable to
+# specific CVEs.
+
+repo_mapping:
+  rhel-8-baseos:
+    name: rhel-8-for-$ARCH-baseos-eus-rpms__8_DOT_4
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/eus/rhel8/8.4/$ARCH/baseos/os/
+  rhel-8-appstream:
+    name: rhel-8-for-$ARCH-appstream-eus-rpms__8_DOT_4
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/eus/rhel8/8.4/$ARCH/appstream/os/ 
+  rhel-8-nfv:
+    name: rhel-8-for-$ARCH-nfv-rpms
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/tus/rhel8/8.4/$ARCH/nfv/os/
+  rhel-8-advanced-virt:
+    name: advanced-virt-for-rhel-8-$ARCH-eus-rpms
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/eus/rhel8/8.4/$ARCH/advanced-virt/os/
+  rhel-8-fast-datapath:
+    name: fast-datapath-for-rhel-8-$ARCH-rpms
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/dist/layered/rhel8/$ARCH/fast-datapath/os/
+  # rhel-8-fast-datapath-aarch64:
+  #   name: 
+  #   baseurl: http://download-node-02.eng.bos.redhat.com/rcm-guest/puddles/Multi-Arch/Fast-DataPath/EL8-Production/latest/aarch64/os/
+  rhel-8-server-ose:
+    name: rhocp-4.8-for-rhel-8-$ARCH-rpms
+    baseurl: http://download.eng.bos.redhat.com/rcm-guest/puddles/RHAOS/plashets/4.10-el8/building/$ARCH/os

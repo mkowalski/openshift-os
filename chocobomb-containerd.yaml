@@ -1,0 +1,15 @@
+repo-packages:
+  - repo: chocobomb-containerd 
+    packages:
+      - containerd.io 
+
+repos:
+  - chocobomb-containerd
+
+exclude-packages:
+  - runc
+
+remove-from-packages:
+  - - containerd.io 
+    - /etc/containerd/config.toml
+

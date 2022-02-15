@@ -1,0 +1,12 @@
+[Unit]
+Description=Fake CRI-O socket for OpenShift SDN
+Requires=containerd.service
+After=containerd.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c -p "mkdir -p /var/run/crio && touch /var/run/crio/crio.sock && mount --bind /var/run/containerd/containerd.sock /var/run/crio/crio.sock"
+
+[Install]
+WantedBy=multi-user.target
+
